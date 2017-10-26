@@ -11,23 +11,12 @@ key = "sxzaijhbwpekfcqrgdtluv noym"
 
 def codedText(text, keyMap):
     return ''.join([keyMap[c] for c in text])
-#    answer = ''
-#    for c in text:
-#        answer += keyMap[c]
-#    return answer
 
 def substitutionEncrypt(plainText, key):
-#    keyMap = {}
-#    for (index,c) in enumerate(alphabet):
-#        keyMap[c] = key[index]
-    return codedText(plainText, keyMap) ### the 3 commented lines should be 
-#coded into the keyMap argument for codedText using dictionary comprehension
+    return codedText(plainText, {c: key[index] for index, c in enumerate(alphabet)})
 
 def substitutionDecrypt(cipherText, key):
-    inverseKeyMap = {}
-    for (index,c) in enumerate(alphabet):
-        inverseKeyMap[key[index]] = c
-    return codedText(cipherText, inverseKeyMap)
+    return codedText(cipherText, {key[index]: c for index, c in enumerate(alphabet)})
 
 def valid_key(key):
     return True if (len(key) == 27) and set(key) == set(alphabet) else False
