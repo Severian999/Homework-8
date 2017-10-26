@@ -15,7 +15,7 @@ def whoDishonest(club1, club2, club3):
             (set(club2) & set(club3))
     return sorted(list(myset))
 
-#    
+
 club1 = ["JOHN","JOHN","FRED","PEG"]
 club2 = ["PEG","GEORGE"]
 club3 = ["GEORGE","DAVID"]
