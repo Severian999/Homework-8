@@ -3,7 +3,7 @@
 """
 Created on Wed Oct 25 16:33:47 2017
 
-@author: Career
+@author: Don Gass
 """
 
 alphabet = "abcdefghijklmnopqrstuvwxyz "
